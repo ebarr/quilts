@@ -1,0 +1,39 @@
+ <br>
+ <div class="container">
+ <div class="jumbotron">
+      <h1>Kathy's </h1>
+      <p id="text">Some information to read.</p>
+      <br>
+      <p><a class="btn btn-lg btn-warning" href="#">Shop now! <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+    </div>
+
+    <h5 class="centeredtext">Featured Quilts</h5>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <a href="http://www.appleridgeamishfurniture.com/images/qquilts/quilt1.jpg" class="thumbnail">
+          <img class="image" src="http://www.appleridgeamishfurniture.com/images/qquilts/quilt1.jpg" alt="First Quilt">
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <a href="http://quiltville.com/brickpaths/brickpaths9.jpg" class="thumbnail">
+          <img class="image" src="http://quiltville.com/brickpaths/brickpaths9.jpg" alt="Second Quilt">
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <a href="http://xroads.virginia.edu/~ug97/quilt/quilt31.gif" class="thumbnail">
+          <img class="image" src="http://xroads.virginia.edu/~ug97/quilt/quilt31.gif" alt="Third quilt">
+        </a>
+      </div>
+    </div>
+</div>
+
+<h1>Index</h1>
+<% @quilts.each do |q| %>
+<p><%= link_to "#{q.title}", details_url(q.id) %></p>
+<p><%= q.description %></p>
+<p><%= q.price %></p>
+<% end %>
+
+
