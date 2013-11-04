@@ -29,11 +29,5 @@
     </div>
 </div>
 
-<h1>Index</h1>
-<% @quilts.each do |q| %>
-<p><%= link_to "#{q.title}", details_url(q.id) %></p>
-<p><%= q.description %></p>
-<p><%= q.price %></p>
-<% end %>
 
 
